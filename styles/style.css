@@ -1,0 +1,159 @@
+@font-face {
+  font-family: "PlayfairDisplay";
+  src: url("../assets/fonts/PlayfairDisplay-Regular.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "PlayfairDisplay";
+  src: url("../assets/fonts/PlayfairDisplay-Medium.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "PlayfairDisplay";
+  src: url("../assets/fonts/PlayfairDisplay-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Medium.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #151515;
+  color: #fdfedc;
+  font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  background-color: #3d3d3d;
+  font-family: "PlayfairDisplay", "Courier New", Courier, monospace;
+  padding: 2.5rem 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.header__flex {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.header__img {
+  width: 280px;
+  height: auto;
+  border-radius: 50%;
+  align-self: center;
+}
+.header__title {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.header__dev-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  align-self: center;
+}
+.header__nav {
+  padding-top: 2.5rem;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  padding: 1.5rem 1rem 1rem;
+  background-color: #3d3d3d;
+  border-bottom: 0.5px solid #d7d7d7;
+}
+
+.nav_list {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.nav_list__link {
+  font-size: 1.125rem;
+}
+.nav_list__link:hover {
+  color: #fefef2;
+  border-bottom: 1.5px solid #fefef2;
+  text-shadow: 0px 0px 5px;
+}
+
+.main {
+  padding: 0 1rem;
+}
+.main__section {
+  padding-top: 3.6rem;
+}
+.main__section-title {
+  font-family: "PlayfairDisplay", "Courier New", Courier, monospace;
+  padding-bottom: 0.8rem;
+}
+.main__section-text {
+  line-height: 1.5rem;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2.5rem;
+}
+
+.project_card {
+  box-shadow: 0px 0px 7px 2px #fff;
+}
+.project_card__img {
+  width: 100%;
+}
+.project_card__title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+.project_card__title {
+  font-family: "PlayfairDisplay";
+}
+.project_card__link--left {
+  margin-left: auto;
+}
+.project_card__svg {
+  width: 1.5rem;
+  transition: transform 0.5s ease;
+}
+.project_card__svg:hover {
+  transform: rotate(360deg);
+}
+.project_card__description {
+  line-height: 1.5rem;
+  padding: 0 1rem 1rem;
+}
+
+.footer {
+  padding: 3.6rem 1rem 1.5rem;
+}/*# sourceMappingURL=style.css.map */

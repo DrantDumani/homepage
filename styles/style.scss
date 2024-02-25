@@ -1,0 +1,153 @@
+@use "./fonts" as *;
+@use "./variables" as *;
+@use "./mixins" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $bg-color;
+  color: $text-color;
+  font-family: $Roboto, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  background-color: $header-nav-bg;
+  font-family: $Playfair-family;
+  padding: 2.5rem $mob-hor-pad 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__img {
+    width: 280px;
+    height: auto;
+    border-radius: 50%;
+    align-self: center;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  &__dev-name {
+    font-size: 2.5rem;
+    font-weight: $bold;
+    align-self: center;
+  }
+
+  &__nav {
+    padding-top: 2.5rem;
+  }
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  padding: 1.5rem $mob-hor-pad 1rem;
+  background-color: $header-nav-bg;
+  border-bottom: 0.5px solid #d7d7d7;
+}
+
+.nav_list {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+
+  &__link {
+    font-size: 1.125rem;
+
+    &:hover {
+      color: $link-hover;
+      border-bottom: 1.5px solid $link-hover;
+      text-shadow: 0px 0px 5px;
+    }
+  }
+}
+
+.main {
+  padding: 0 $mob-hor-pad;
+
+  &__section {
+    padding-top: $sect-pad-top;
+  }
+
+  &__section-title {
+    font-family: $Playfair-family;
+    padding-bottom: 0.8rem;
+  }
+
+  &__section-text {
+    line-height: $p-height;
+  }
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2.5rem;
+}
+
+.project_card {
+  box-shadow: 0px 0px 7px 2px #fff;
+  &__img {
+    width: 100%;
+  }
+
+  &__title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  &__title {
+    font-family: $Playfair;
+    // font-size:
+  }
+
+  &__link {
+    &--left {
+      margin-left: auto;
+    }
+  }
+
+  &__svg {
+    width: 1.5rem;
+    transition: transform 0.5s ease;
+
+    &:hover {
+      transform: rotate(360deg);
+    }
+  }
+
+  &__description {
+    line-height: $p-height;
+    padding: 0 1rem 1rem;
+  }
+}
+
+.footer {
+  padding: $sect-pad-top $mob-hor-pad 1.5rem;
+}
