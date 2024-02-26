@@ -6,6 +6,12 @@
   }
 }
 
+@mixin desktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
 @mixin section-title {
   font-family: $Playfair-family;
   padding-bottom: 0.8rem;
@@ -15,4 +21,9 @@
 @mixin svg-link {
   width: 1.5rem;
   transition: transform 0.5s ease;
+}
+
+@mixin desktop-width-rules {
+  max-width: 68.75rem;
+  margin: 0 auto;
 }

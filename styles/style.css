@@ -56,33 +56,56 @@ a {
   padding: 2.5rem 1rem 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 0.5rem;
 }
 @media (min-width: 768px) {
   .header {
-    padding-top: 4rem;
-    padding-bottom: 1.5rem;
+    padding: 4rem 3.25rem 1.5rem;
   }
 }
-.header__flex {
+@media (min-width: 1280px) {
+  .header {
+    min-height: 100vh;
+  }
+}
+.header__content-container {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  max-width: 68.75rem;
+  margin: 0 auto;
 }
 .header__img {
-  width: 280px;
+  width: 17.5rem;
   height: auto;
   border-radius: 50%;
   align-self: center;
+}
+@media (min-width: 768px) {
+  .header__img {
+    width: 20rem;
+  }
 }
 .header__title {
   font-size: 2.25rem;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .header__title {
+    font-size: 3.75rem;
+  }
+}
 .header__dev-name {
   font-size: 2.5rem;
   font-weight: 700;
   align-self: center;
+}
+@media (min-width: 768px) {
+  .header__dev-name {
+    font-size: 4rem;
+  }
 }
 .header__nav {
   padding-top: 2.5rem;
@@ -106,6 +129,8 @@ a {
   display: flex;
   justify-content: space-between;
   gap: 1.5rem;
+  max-width: 68.75rem;
+  margin: 0 auto;
 }
 @media (min-width: 768px) {
   .nav_list {
@@ -137,6 +162,12 @@ a {
 @media (min-width: 768px) {
   .main {
     padding: 0 3.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .main {
+    max-width: 68.75rem;
+    margin: 0 auto;
   }
 }
 .main__section {
@@ -175,6 +206,7 @@ a {
 }
 .project_card__title {
   font-family: "PlayfairDisplay";
+  font-size: 1.375rem;
 }
 .project_card__link--left {
   margin-left: auto;
@@ -202,6 +234,12 @@ a {
   .footer {
     padding-left: 3.25rem;
     padding-right: 3.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .footer {
+    max-width: 68.75rem;
+    margin: 0 auto;
   }
 }
 .footer__title {

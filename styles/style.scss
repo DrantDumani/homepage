@@ -31,34 +31,48 @@ a {
   padding: 2.5rem $mob-hor-pad 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   @include tablet {
-    padding-top: 4rem;
-    padding-bottom: 1.5rem;
+    padding: 4rem $tab-hor-pad 1.5rem;
+  }
+  @include desktop {
+    min-height: 100vh;
   }
 
-  &__flex {
+  &__content-container {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    @include desktop-width-rules;
   }
 
   &__img {
-    width: 280px;
+    width: 17.5rem;
     height: auto;
     border-radius: 50%;
     align-self: center;
+    @include tablet {
+      width: 20rem;
+    }
   }
 
   &__title {
     font-size: 2.25rem;
     text-align: center;
+    @include tablet {
+      font-size: 3.75rem;
+    }
   }
 
   &__dev-name {
     font-size: 2.5rem;
     font-weight: $bold;
     align-self: center;
+    @include tablet {
+      font-size: 4rem;
+    }
   }
 
   &__nav {
@@ -82,6 +96,7 @@ a {
   display: flex;
   justify-content: space-between;
   gap: 1.5rem;
+  @include desktop-width-rules;
   @include tablet {
     gap: 2.25rem;
   }
@@ -110,6 +125,9 @@ a {
   padding: 0 $mob-hor-pad;
   @include tablet {
     padding: 0 $tab-hor-pad;
+  }
+  @include desktop {
+    @include desktop-width-rules;
   }
 
   &__section {
@@ -149,6 +167,7 @@ a {
 
   &__title {
     font-family: $Playfair;
+    font-size: 1.375rem;
   }
 
   &__link {
@@ -180,6 +199,9 @@ a {
   @include tablet {
     padding-left: $tab-hor-pad;
     padding-right: $tab-hor-pad;
+  }
+  @include desktop {
+    @include desktop-width-rules;
   }
 
   &__title {
