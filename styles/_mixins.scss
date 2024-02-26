@@ -1,7 +1,9 @@
 @use "./variables" as *;
 
-@mixin section-pad {
-  padding: 3.5rem $mob-hor-pad 0;
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
 }
 
 @mixin section-title {
