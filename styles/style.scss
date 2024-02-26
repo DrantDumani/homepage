@@ -47,7 +47,7 @@ a {
   }
 
   &__title {
-    font-size: 1.5rem;
+    font-size: 2.25rem;
     text-align: center;
   }
 
@@ -81,21 +81,20 @@ a {
     &:hover {
       color: $link-hover;
       border-bottom: 1.5px solid $link-hover;
-      text-shadow: 0px 0px 5px;
+      text-shadow: $link-hover-shadow;
     }
   }
 }
 
 .main {
-  padding: 0 $mob-hor-pad;
+  padding: 0 $mob-hor-pad 2rem;
 
   &__section {
     padding-top: $sect-pad-top;
   }
 
   &__section-title {
-    font-family: $Playfair-family;
-    padding-bottom: 0.8rem;
+    @include section-title;
   }
 
   &__section-text {
@@ -136,20 +135,54 @@ a {
   }
 
   &__svg {
-    width: 1.5rem;
-    transition: transform 0.5s ease;
+    @include svg-link;
 
     &:hover {
-      transform: rotate(360deg);
+      transform: $svg-rot;
     }
   }
 
   &__description {
     line-height: $p-height;
     padding: 0 1rem 1rem;
+    font-size: 1.125rem;
   }
 }
 
 .footer {
   padding: $sect-pad-top $mob-hor-pad 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  &__title {
+    @include section-title;
+  }
+
+  &__text {
+    font-size: 1.125rem;
+    line-height: $p-height;
+  }
+
+  &__social-flex {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  &__svg {
+    @include svg-link;
+    width: 2.5rem;
+
+    &:hover {
+      transform: $svg-rot;
+    }
+  }
+
+  &__link {
+    font-weight: $bold;
+    text-decoration: underline;
+    &:hover {
+      text-shadow: $link-hover-shadow;
+    }
+  }
 }

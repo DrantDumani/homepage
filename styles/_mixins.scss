@@ -3,3 +3,14 @@
 @mixin section-pad {
   padding: 3.5rem $mob-hor-pad 0;
 }
+
+@mixin section-title {
+  font-family: $Playfair-family;
+  padding-bottom: 0.8rem;
+  font-size: 2rem;
+}
+
+@mixin svg-link {
+  width: 1.5rem;
+  transition: transform 0.5s ease;
+}
